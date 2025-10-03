@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - 24Render VFX & Video Editing</title>
+    <meta name="description" content="Explore our portfolio of high-impact VFX projects, motion graphics, and video editing work that brings brands to life.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="24Render">
+    <meta name="keywords" content="VFX portfolio, video editing work, motion graphics, visual effects showcase, 3D rendering projects">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/enhanced.css">
+    <link rel="stylesheet" href="assets/css/work-page.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-logo">
+                <img src="assets/images/logo.jpg" alt="24Render Logo" class="loader-logo-img">
+            </div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.jpg" alt="24Render Logo" class="nav-logo-img">
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="menuBtn" type="button">
+                    <span></span>
+                </button>
+                <nav class="mainMenu">
+                    <ul>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="index.html#contact">Book a call</a></li>
+                        <li><a href="index.html#how-it-works">How it works</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#process">My Process</a></li>
+                        <li><a href="index.html#faq">Questions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="work-hero">
+            <div class="container">
+                <div class="work-hero-content">
+                    <h1 class="work-hero-title">
+                        <span class="title-line">Our Creative</span>
+                        <span class="title-line accent">Portfolio</span>
+                    </h1>
+                    <p class="work-hero-subtitle">
+                        Discover our latest VFX projects, motion graphics, and cinematic video editing work that transforms brands and tells compelling stories.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="work-filter">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="vfx">VFX & Visual Effects</button>
+                    <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+                    <button class="filter-btn" data-filter="commercial">Commercials</button>
+                    <button class="filter-btn" data-filter="music">Music Videos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="work-portfolio">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- VFX Project 1 -->
+                    <div class="portfolio-item" data-category="vfx commercial">
+                        <div class="portfolio-card">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="Epic Brand Commercial - VFX Breakdown"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Epic Brand Commercial</h3>
+                                <p class="portfolio-description">High-impact VFX commercial featuring particle systems, 3D integration, and cinematic color grading.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">VFX</span>
+                                    <span class="tag">Motion Graphics</span>
+                                    <span class="tag">Color Grading</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Motion Graphics Project -->
+                    <div class="portfolio-item" data-category="motion commercial">
+                        <div class="portfolio-card">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="Tech Product Launch Animation"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Tech Product Launch</h3>
+                                <p class="portfolio-description">Dynamic motion graphics and 3D product visualization for a cutting-edge tech company launch.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Motion Graphics</span>
+                                    <span class="tag">3D Animation</span>
+                                    <span class="tag">Product Viz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Music Video Project -->
+                    <div class="portfolio-item" data-category="music vfx">
+                        <div class="portfolio-card">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="Synth Wave Music Video VFX"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Synth Wave Music Video</h3>
+                                <p class="portfolio-description">Retro-futuristic music video with neon effects, digital glitches, and seamless VFX integration.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Music Video</span>
+                                    <span class="tag">VFX</span>
+                                    <span class="tag">Retro Style</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Corporate Video -->
+                    <div class="portfolio-item" data-category="motion commercial">
+                        <div class="portfolio-card">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="Corporate Identity Animation"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Corporate Identity</h3>
+                                <p class="portfolio-description">Clean, professional motion graphics for corporate branding and identity presentation.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Corporate</span>
+                                    <span class="tag">Branding</span>
+                                    <span class="tag">Clean Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fashion Campaign -->
+                    <div class="portfolio-item" data-category="commercial vfx">
+                        <div class="portfolio-card">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="High Fashion Campaign Edit"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Fashion Campaign</h3>
+                                <p class="portfolio-description">Elegant fashion campaign with sophisticated editing, color grading, and subtle VFX touches.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Fashion</span>
+                                    <span class="tag">Color Grading</span>
+                                    <span class="tag">Editing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentary VFX -->
+                    <div class="portfolio-item" data-category="vfx">
+                        <div class="portfolio-card">
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="Documentary VFX Enhancement"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3 class="portfolio-title">Documentary Series</h3>
+                                <p class="portfolio-description">Invisible VFX and motion graphics for documentary storytelling and information visualization.</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Documentary</span>
+                                    <span class="tag">Invisible VFX</span>
+                                    <span class="tag">Infographics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="work-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Create Something Amazing?</h2>
+                    <p class="cta-description">
+                        Let's discuss your project and bring your vision to life with our expert VFX and video editing services.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
+                        <a href="index.html#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-main">24RENDER</span>
+                        <span class="logo-sub">CREATIVE</span>
+                    </div>
+                    <p class="footer-copyright">© 2025 24render.creative.io</p>
+                </div>
+                <div class="footer-nav">
+                    <nav class="footer-menu">
+                        <a href="work.html" class="footer-link">My Work</a>
+                        <a href="index.html#contact" class="footer-link">Book a Call</a>
+                        <a href="index.html#how-it-works" class="footer-link">How it works</a>
+                        <a href="index.html#about" class="footer-link">About Me</a>
+                        <a href="index.html#process" class="footer-link">My Process</a>
+                        <a href="index.html#faq" class="footer-link">Questions</a>
+                    </nav>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/work-page.js"></script>
+    
+    <!-- Enhanced Fallback Navigation Script -->
+    <script>
+        // Ensure navigation works even if main.js fails
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menuBtn');
+            const mainMenu = document.querySelector('.mainMenu');
+            const navLinks = document.querySelectorAll('.mainMenu a');
+            
+            // Mobile menu toggle
+            if (menuBtn && mainMenu) {
+                menuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menuBtn.classList.toggle('act');
+                    mainMenu.classList.toggle('act');
+                    document.body.style.overflow = mainMenu.classList.contains('act') ? 'hidden' : '';
+                });
+            }
+            
+            // Close menu when clicking links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Always close mobile menu when clicking any link
+                    if (menuBtn && mainMenu) {
+                        menuBtn.classList.remove('act');
+                        mainMenu.classList.remove('act');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (navToggle && navMenu && 
+                    !navToggle.contains(e.target) && 
+                    !navMenu.contains(e.target)) {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
