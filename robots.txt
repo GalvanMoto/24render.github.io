@@ -1,0 +1,16 @@
+# robots.txt for 24Render Website
+# This file tells search engines which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://24render.com/sitemap.xml
+
+# Crawl-delay (optional, adjust if needed)
+Crawl-delay: 1
+
+# Block specific files/folders if needed (currently allowing all)
+# Disallow: /assets/
+# Disallow: *.js
+# Disallow: *.css
