@@ -142,53 +142,69 @@ class WorkPage {
     // ==========================================================================
     setupNavigation() {
         this.header = document.querySelector('.header');
-        this.navToggle = document.querySelector('.nav-toggle');
-        this.navMenu = document.querySelector('.nav-menu');
-        this.navLinks = document.querySelectorAll('.nav-link');
+        this.menuBtn = document.querySelector('.menuBtn');
+        this.mainMenu = document.querySelector('.mainMenu');
+        // Select both mobile and desktop navigation links
+        this.navLinks = document.querySelectorAll('.mainMenu a, .nav-menu a');
 
         // Mobile menu toggle
-        this.navToggle?.addEventListener('click', () => this.toggleMobileMenu());
+        if (this.menuBtn) {
+            this.menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleMobileMenu();
+            });
+        }
 
-        // Smooth scroll for navigation links
+        // Active link highlighting for both mobile and desktop navigation
         this.navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                // Check if it's an internal link (contains #)
                 const href = link.getAttribute('href');
-                if (href.includes('#')) {
+                
+                // Only prevent default for internal anchor links
+                if (href.startsWith('#')) {
                     e.preventDefault();
-                    const targetId = href.split('#')[1];
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        this.scrollToElement(targetElement);
-                    } else {
-                        // If target doesn't exist on this page, go to index.html
-                        window.location.href = href;
-                    }
+                    this.scrollToSection(href);
+                    this.setActiveLink(link);
                 }
                 
-                this.closeMobileMenu();
+                // Close mobile menu when clicking mobile nav links
+                if (link.closest('.mainMenu')) {
+                    this.closeMobileMenu();
+                }
             });
         });
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!this.navToggle?.contains(e.target) && !this.navMenu?.contains(e.target)) {
+            if (!this.menuBtn?.contains(e.target) && !this.mainMenu?.contains(e.target)) {
                 this.closeMobileMenu();
             }
         });
     }
 
     toggleMobileMenu() {
-        this.navToggle?.classList.toggle('active');
-        this.navMenu?.classList.toggle('active');
-        document.body.style.overflow = this.navMenu?.classList.contains('active') ? 'hidden' : '';
+        this.menuBtn?.classList.toggle('open');
+        this.mainMenu?.classList.toggle('active');
+        document.body.style.overflow = this.mainMenu?.classList.contains('active') ? 'hidden' : '';
     }
 
     closeMobileMenu() {
-        this.navToggle?.classList.remove('active');
-        this.navMenu?.classList.remove('active');
+        this.menuBtn?.classList.remove('open');
+        this.mainMenu?.classList.remove('active');
         document.body.style.overflow = '';
+    }
+
+    setActiveLink(activeLink) {
+        this.navLinks.forEach(link => link.classList.remove('active'));
+        activeLink.classList.add('active');
+    }
+
+    scrollToSection(href) {
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            this.scrollToElement(targetElement);
+        }
     }
 
     scrollToElement(element) {

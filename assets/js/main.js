@@ -18,7 +18,6 @@ class Website {
         this.setupFAQ();
         this.setupContactForm();
         this.setupSmoothScroll();
-        this.setupLoader();
         this.setupParallax();
     }
 
@@ -33,30 +32,6 @@ class Website {
 
         // Navigation events
         document.addEventListener('click', (e) => this.handleGlobalClick(e));
-    }
-
-    // ==========================================================================
-    // Loading Screen
-    // ==========================================================================
-    setupLoader() {
-        const loader = document.getElementById('loading-screen');
-        const loaderBar = document.querySelector('.loader-bar');
-        
-        // Animate loader bar
-        setTimeout(() => {
-            loaderBar.style.left = '0%';
-        }, 100);
-
-        // Hide loader when page is loaded
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                    document.body.style.overflow = 'visible';
-                }, 500);
-            }, 1000);
-        });
     }
 
     // ==========================================================================
@@ -105,14 +80,14 @@ class Website {
     }
 
     toggleMobileMenu() {
-        this.menuBtn?.classList.toggle('act');
-        this.mainMenu?.classList.toggle('act');
-        document.body.style.overflow = this.mainMenu?.classList.contains('act') ? 'hidden' : '';
+        this.menuBtn?.classList.toggle('open');
+        this.mainMenu?.classList.toggle('active');
+        document.body.style.overflow = this.mainMenu?.classList.contains('active') ? 'hidden' : '';
     }
 
     closeMobileMenu() {
-        this.menuBtn?.classList.remove('act');
-        this.mainMenu?.classList.remove('act');
+        this.menuBtn?.classList.remove('open');
+        this.mainMenu?.classList.remove('active');
         document.body.style.overflow = '';
     }
 
@@ -237,8 +212,8 @@ class Website {
 
     setupWorkLightbox() {
         this.lightbox = document.getElementById('lightbox');
-        this.lightboxVideo = this.lightbox?.querySelector('video');
         this.lightboxClose = this.lightbox?.querySelector('.lightbox-close');
+        this.lightboxMediaContainer = document.getElementById('lightbox-media-container');
 
         this.lightboxClose?.addEventListener('click', () => this.closeLightbox());
         this.lightbox?.addEventListener('click', (e) => {
@@ -256,24 +231,44 @@ class Website {
     }
 
     openLightbox(workItem) {
-        const title = workItem.querySelector('.work-info h3')?.textContent || 'Project';
+        const videoUrl = workItem.getAttribute('data-video');
+        if (!videoUrl) return;
+
+        // Clear previous media
+        this.lightboxMediaContainer.innerHTML = '';
+
+        let embedHtml = '';
+        // YouTube short or long URL handling
+        const ytMatch = videoUrl.match(/(?:youtu.be\/(.+)|v=([^&]+))/);
+        let videoId = '';
+        if (ytMatch) {
+            videoId = ytMatch[1] || ytMatch[2];
+        }
+        if (videoId) {
+            embedHtml = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" title="YouTube video" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+        }
+
+        if (!embedHtml) return;
         
-        // Placeholder video URL - in real implementation, this would come from data attributes
-        const videoSrc = 'data:video/mp4;base64,'; // Placeholder
-        
-        this.lightboxVideo.src = videoSrc;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'lightbox-embed-wrapper';
+        wrapper.style.cssText = 'position:relative;width:100%;padding-top:56.25%;';
+        const inner = document.createElement('div');
+        inner.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;';
+        inner.innerHTML = embedHtml;
+        wrapper.appendChild(inner);
+        this.lightboxMediaContainer.appendChild(wrapper);
+
         this.lightbox?.classList.add('active');
         document.body.style.overflow = 'hidden';
-        
-        // For demo purposes, show an alert instead of video
-        alert(`Opening project: ${title}\nIn a real implementation, this would show the project video.`);
-        this.closeLightbox();
     }
 
     closeLightbox() {
-        this.lightbox?.classList.remove('active');
-        this.lightboxVideo.pause();
-        this.lightboxVideo.src = '';
+        if (!this.lightbox) return;
+        this.lightbox.classList.remove('active');
+        if (this.lightboxMediaContainer) {
+            this.lightboxMediaContainer.innerHTML = '';
+        }
         document.body.style.overflow = '';
     }
 

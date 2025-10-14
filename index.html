@@ -9,6 +9,11 @@
     <meta name="author" content="24Render">
     <meta name="keywords" content="VFX, video editing, motion graphics, visual effects, 3D rendering, post-production">
     
+    <!-- Cache Control Meta Tags for Development -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,26 +25,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/enhanced.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=20241221">
+    <link rel="stylesheet" href="assets/css/enhanced.css?v=20241221">
 </head>
-<body>    
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loader">
-            <div class="loader-logo">
-                <img src="assets/images/logo.jpg" alt="24Render Logo" class="loader-logo-img">
-            </div>
-            <div class="loader-progress">
-                <div class="loader-bar"></div>
-            </div>
-        </div>
-    </div>
-
+<body>
     <!-- Navigation -->
     <header class="header">
         <nav class="nav">
@@ -51,19 +41,20 @@
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button class="menuBtn" type="button">
+                <button class="menuBtn" type="button" title="Menu" aria-label="Toggle mobile menu">
                     <span></span>
                 </button>
-                <nav class="mainMenu">
+                <div class="mainMenu">
                     <ul>
                         <li><a href="work.html">Our Work</a></li>
-                        <li><a href="#contact">Book a call</a></li>
+                        
                         <li><a href="#how-it-works">How it works</a></li>
                         <li><a href="#about">About Me</a></li>
                         <li><a href="#process">My Process</a></li>
                         <li><a href="#faq">Questions</a></li>
+                        <li><a href="#contact">Book a call</a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
         </nav>
     </header>
@@ -102,92 +93,26 @@
             </div>
             <div class="work-grid">
                 <div class="work-item" data-category="vfx">
-                    <div class="work-image">
-                        <img src="assets/images/project-1.jpg" alt="VFX Project 1" loading="lazy">
-                        <div class="work-overlay">
-                            <div class="work-info">
-                                <h3>Epic Brand Commercial</h3>
-                                <p>VFX • Motion Graphics</p>
-                            </div>
-                            <div class="work-play">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KsHnmoXBoa8?si=FH6zXafDOjE4UWRn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 
                 <div class="work-item" data-category="motion">
-                    <div class="work-image">
-                        <img src="assets/images/project-2.jpg" alt="Motion Graphics Project" loading="lazy">
-                        <div class="work-overlay">
-                            <div class="work-info">
-                                <h3>Tech Product Launch</h3>
-                                <p>Motion Graphics • 3D Integration</p>
-                            </div>
-                            <div class="work-play">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5-ny5UlrMbA?si=ylpy5AnSn7ekHkvj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 
                 <div class="work-item" data-category="edit">
-                    <div class="work-image">
-                        <img src="assets/images/project-3.jpg" alt="Video Editing Project" loading="lazy">
-                        <div class="work-overlay">
-                            <div class="work-info">
-                                <h3>Documentary Series</h3>
-                                <p>Editing • Color Grading</p>
-                            </div>
-                            <div class="work-play">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ST9Qsly3VVk?si=mP-sLdHxDaVQdGJW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 
                 <div class="work-item" data-category="vfx">
-                    <div class="work-image">
-                        <img src="assets/images/project-4.jpg" alt="VFX Project 2" loading="lazy">
-                        <div class="work-overlay">
-                            <div class="work-info">
-                                <h3>Music Video</h3>
-                                <p>VFX • Compositing</p>
-                            </div>
-                            <div class="work-play">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="work-item" data-category="motion">
-                    <div class="work-image">
-                        <img src="assets/images/project-5.jpg" alt="Animation Project" loading="lazy">
-                        <div class="work-overlay">
-                            <div class="work-info">
-                                <h3>Corporate Identity</h3>
-                                <p>Motion Graphics • Branding</p>
-                            </div>
-                            <div class="work-play">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="work-item" data-category="edit">
-                    <div class="work-image">
-                        <img src="assets/images/project-6.jpg" alt="Edit Project" loading="lazy">
-                        <div class="work-overlay">
-                            <div class="work-info">
-                                <h3>Fashion Campaign</h3>
-                                <p>Editing • Post-Production</p>
-                            </div>
-                            <div class="work-play">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LcCkNy9-tqo?si=H12su-KVVGPADbs2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -221,6 +146,7 @@
             </div>
         </div>
         
+        
         <div class="services-content">
             <div class="container">
                 <div class="services-main-title">
@@ -246,6 +172,7 @@
                 </div>
             </div>
         </div>
+        
     </section>
 
     <!-- How It Works Section -->
@@ -554,8 +481,8 @@
                     COMPLICATED
                 </h1>
                 <div class="contact-hero-buttons">
-                    <a href="mailto:hello@24render.com" class="btn btn-primary">Get Started</a>
-                    <a href="mailto:hello@24render.com" class="btn btn-secondary">
+                    <a href="mailto:vishal@24render.com" class="btn btn-primary">Get Started</a>
+                    <a href="mailto:vishal@24render.com" class="btn btn-secondary">
                         Send us a message 
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -573,7 +500,7 @@
                         <span class="logo-main">24RENDER</span>
                         <span class="logo-sub">CREATIVE</span>
                     </div>
-                    <p class="footer-copyright">© 2025 24render.creative.io</p>
+                    <a href="https://www.instagram.com/galvanmoto" target="_blank" rel="noopener"><p class="footer-copyright">Made with <i class="fas fa-heart"></i> by Galvan</p></a>
                 </div>
                 <div class="footer-nav">
                     <nav class="footer-menu">
@@ -586,9 +513,10 @@
                     </nav>
                 </div>
                 <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/24render" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@24render" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:vishal@24render.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+918084736565" aria-label="Phone"><i class="fas fa-phone"></i></a>
                 </div>
             </div>
         </div>
@@ -599,45 +527,56 @@
     <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
             <span class="lightbox-close">&times;</span>
-            <div class="lightbox-video">
-                <video controls>
-                    <source src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="lightbox-video" id="lightbox-media-container">
+                <!-- Media (video tag or YouTube iframe) injected dynamically -->
             </div>
         </div>
     </div>
 
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/main.js?v=20241220"></script> -->
     
-    <!-- Fallback Navigation Script -->
+    <!-- Enhanced Fallback Navigation Script -->
     <script>
         // Ensure navigation works even if main.js fails
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('Fallback navigation script loaded');
+            
             const menuBtn = document.querySelector('.menuBtn');
             const mainMenu = document.querySelector('.mainMenu');
             const navLinks = document.querySelectorAll('.mainMenu a');
             
-
+            console.log('Menu elements found:', { menuBtn, mainMenu, navLinks: navLinks.length });
             
             // Mobile menu toggle
             if (menuBtn && mainMenu) {
-                menuBtn.addEventListener('click', function(e) {
+                menuBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
                     e.stopPropagation();
-                    menuBtn.classList.toggle('act');
-                    mainMenu.classList.toggle('act');
-                    document.body.style.overflow = mainMenu.classList.contains('act') ? 'hidden' : '';
+                    console.log('Menu button clicked');
+                    
+                    mainMenu.classList.toggle('active');
+                    menuBtn.classList.toggle('open');
+                    
+                    // Prevent body scroll when menu is open
+                    if (mainMenu.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
                 });
+            } else {
+                console.error('Menu elements not found!');
             }
             
             // Close menu when clicking links
             navLinks.forEach(link => {
                 link.addEventListener('click', function() {
+                    console.log('Nav link clicked');
                     // Always close mobile menu when clicking any link
                     if (menuBtn && mainMenu) {
-                        menuBtn.classList.remove('act');
-                        mainMenu.classList.remove('act');
+                        menuBtn.classList.remove('open');
+                        mainMenu.classList.remove('active');
                         document.body.style.overflow = '';
                     }
                 });
@@ -648,8 +587,17 @@
                 if (menuBtn && mainMenu && 
                     !menuBtn.contains(e.target) && 
                     !mainMenu.contains(e.target)) {
-                    menuBtn.classList.remove('act');
-                    mainMenu.classList.remove('act');
+                    menuBtn.classList.remove('open');
+                    mainMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mainMenu.classList.contains('active')) {
+                    menuBtn.classList.remove('open');
+                    mainMenu.classList.remove('active');
                     document.body.style.overflow = '';
                 }
             });
