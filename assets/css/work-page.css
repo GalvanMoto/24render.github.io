@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Work Page Specific Styles
+   ========================================================================== */
+
+/* Work Hero Section */
+.work-hero {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(10, 10, 10, 1) 50%, rgba(0, 212, 170, 0.05) 100%);
+    text-align: center;
+}
+
+.work-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.work-hero-title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.work-hero-title .accent {
+    color: #ff6b35;
+}
+
+.work-hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Portfolio Grid */
+.work-portfolio {
+    padding: 4rem 0;
+    background: #0a0a0a;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    transition: all 0.3s ease;
+}
+
+.portfolio-item.hidden {
+    display: none;
+}
+
+/* Portfolio Cards */
+.portfolio-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6b35;
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: #2a2a2a;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .video-container iframe {
+    transform: scale(1.05);
+}
+
+/* Portfolio Info */
+.portfolio-info {
+    padding: 1.5rem;
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-title {
+    color: #ff6b35;
+}
+
+.portfolio-description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* Call to Action Section */
+.work-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.btn-primary {
+    background: #ff6b35;
+    color: #ffffff;
+    border-color: #ff6b35;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: #ff6b35;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .video-container {
+        height: 200px;
+    }
+    
+    .portfolio-info {
+        padding: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-hero {
+        padding: 100px 0 40px;
+    }
+    
+    .video-container {
+        height: 180px;
+    }
+    
+    .portfolio-title {
+        font-size: 1.25rem;
+    }
+}

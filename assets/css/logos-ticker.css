@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Logo Ticker Section - Infinite Scrolling Animation
+   ========================================================================== */
+
+.logos-section {
+    padding: 4rem 0;
+    background: #0a0a0a;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 107, 53, 0.1);
+    border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+/* Logos Header */
+.logos-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logos-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.logos-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin: 0;
+}
+
+.logos-ticker {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logos-ticker-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: scroll-logos 30s linear infinite;
+    width: fit-content;
+}
+
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.logo-item img {
+    height: 300px;
+    width: auto;
+    max-width: 300px;   
+}
+
+
+.ticker-separator {
+    color: rgba(255, 107, 53, 0.5);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logos-section {
+        padding: 1rem 0;
+    }
+    
+    .logos-ticker-content {
+        gap: 2rem;
+        animation-duration: 20s;
+    }
+    
+    .logo-item img {
+        height: 200px;
+        max-width: 200px;
+    }
+    
+    .ticker-separator {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-section {
+        padding: 1rem 0;
+    }
+    
+    .logos-ticker-content {
+        gap: 1rem;
+        animation-duration: 15s;
+    }
+    
+    .logo-item img {
+        height: 100px;
+        max-width: 100px;
+    }
+}
