@@ -7,7 +7,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://24render.com/</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,7 +15,7 @@
     <!-- Work/Portfolio Page -->
     <url>
         <loc>https://24render.com/work.html</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -23,7 +23,7 @@
     <!-- Services Section -->
     <url>
         <loc>https://24render.com/#services</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -31,7 +31,7 @@
     <!-- How It Works Section -->
     <url>
         <loc>https://24render.com/#how-it-works</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -39,7 +39,15 @@
     <!-- About Section -->
     <url>
         <loc>https://24render.com/#about</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Founders Section -->
+    <url>
+        <loc>https://24render.com/#founders</loc>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -47,7 +55,7 @@
     <!-- Process Section -->
     <url>
         <loc>https://24render.com/#process</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -55,7 +63,7 @@
     <!-- FAQ Section -->
     <url>
         <loc>https://24render.com/#faq</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -63,7 +71,7 @@
     <!-- Contact Section -->
     <url>
         <loc>https://24render.com/#contact</loc>
-        <lastmod>2024-12-20</lastmod>
+        <lastmod>2025-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

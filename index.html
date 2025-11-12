@@ -30,8 +30,14 @@
     <meta property="og:title" content="24Render - High Impact VFX & Video Editing">
     <meta property="og:description" content="Transform your brand with cinematic storytelling, cutting-edge visual effects, and creative video editing.">
     <meta property="og:image" content="https://24render.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="24Render VFX and Video Editing Studio">
     <meta property="og:site_name" content="24Render">
     <meta property="og:locale" content="en_US">
+    <meta property="og:video" content="https://www.youtube.com/watch?v=KsHnmoXBoa8">
+    <meta property="og:see_also" content="https://www.instagram.com/24render">
+    <meta property="og:see_also" content="https://www.youtube.com/@24render">""
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -39,12 +45,29 @@
     <meta property="twitter:title" content="24Render - High Impact VFX & Video Editing">
     <meta property="twitter:description" content="Transform your brand with cinematic storytelling, cutting-edge visual effects, and creative video editing.">
     <meta property="twitter:image" content="https://24render.com/assets/images/twitter-card.jpg">
+    <meta property="twitter:image:alt" content="24Render Professional VFX Studio">
+    <meta property="twitter:site" content="@24render">
+    <meta property="twitter:creator" content="@24render">
+    <meta property="twitter:domain" content="24render.com">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#ff6b35">
     <meta name="msapplication-TileColor" content="#ff6b35">
     <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png">
     <link rel="canonical" href="https://24render.com/">
+    
+    <!-- Alternate Language Tags -->
+    <link rel="alternate" hreflang="en" href="https://24render.com/">
+    <link rel="alternate" hreflang="x-default" href="https://24render.com/">
+    
+    <!-- Business Information -->
+    <meta name="contact" content="vishal@24render.com">
+    <meta name="reply-to" content="vishal@24render.com">
+    <meta name="owner" content="24Render - Arpit Grag, Vishal Kumar">
+    <meta name="url" content="https://24render.com">
+    <meta name="identifier-URL" content="https://24render.com">
+    <meta name="category" content="Video Production, VFX, Visual Effects, Motion Graphics">
+    <meta name="subject" content="Professional VFX and Video Editing Services">
     
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="24Render - High Impact VFX & Video Editing">
@@ -114,18 +137,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/css/fantastic-nav.css" as="style">
+    
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Favicon -->
+    <!-- Favicon and App Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=1762494526">
-    <link rel="stylesheet" href="assets/css/enhanced.css?v=1762494526">
-    <link rel="stylesheet" href="assets/css/fantastic-nav.css?v=1762494526">
-    <link rel="stylesheet" href="assets/css/logos-ticker.css?v=1762494526">
-    <link rel="stylesheet" href="assets/css/footer.css?v=1762494526">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/enhanced.css">
+    <link rel="stylesheet" href="assets/css/fantastic-nav.css">
+    <link rel="stylesheet" href="assets/css/logos-ticker.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
     <!-- Fantastic Responsive Navigation -->
@@ -614,6 +646,33 @@
         </div>
     </section>
 
+    <!-- Our Founders Section -->
+    <section id="founders" class="founders">
+        <div class="founders-background">
+            <div class="founders-bg-text">FOUNDERS</div>
+        </div>
+        <div class="container">
+            <div class="founders-header">
+                <div class="founders-label">Meet The Team</div>
+                <h2 class="founders-title">OUR FOUNDERS</h2>
+            </div>
+            <div class="founders-content">
+                <div class="founder-card">
+                    <div class="founder-info">
+                        <h3 class="founder-name">Arpit Grag</h3>
+                        <p class="founder-role">Co-Founder</p>
+                    </div>
+                </div>
+                <div class="founder-card">
+                    <div class="founder-info">
+                        <h3 class="founder-name">Vishal Kumar</h3>
+                        <p class="founder-role">Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="faq">
         <div class="faq-background">
@@ -797,8 +856,8 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="assets/js/main.js?v=1762494526"></script>
-    <script src="assets/js/fantastic-nav.js?v=1762494526"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/fantastic-nav.js"></script>
     
 
     
@@ -808,23 +867,45 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "24Render",
+        "alternateName": "24Render VFX Studio",
         "url": "https://24render.com",
         "logo": "https://24render.com/assets/images/logo.jpg",
-        "description": "Professional VFX and video editing studio specializing in cinematic storytelling, visual effects, and creative content production.",
+        "description": "Professional VFX and video editing studio specializing in cinematic storytelling, visual effects, and creative content production. Founded by Arpit Grag and Vishal Kumar.",
+        "foundingDate": "2019",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "Arpit Grag",
+                "jobTitle": "Co-Founder"
+            },
+            {
+                "@type": "Person",
+                "name": "Vishal Kumar",
+                "jobTitle": "Co-Founder"
+            }
+        ],
         "address": {
             "@type": "PostalAddress",
-            "addressCountry": "US"
+            "addressCountry": "IN",
+            "addressRegion": "India"
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+91 80847 36565",
+            "telephone": "+918084736565",
             "email": "vishal@24render.com",
-            "contactType": "Customer Service"
+            "contactType": "Customer Service",
+            "availableLanguage": ["English", "Hindi"]
         },
         "sameAs": [
             "https://www.instagram.com/24render",
             "https://www.youtube.com/@24render"
-        ]
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "100",
+            "bestRating": "5"
+        }
     }
     </script>
     
@@ -882,6 +963,143 @@
             "@type": "SearchAction",
             "target": "https://24render.com/?s={search_term_string}",
             "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://24render.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Our Work",
+                "item": "https://24render.com/work.html"
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How Long Does My VFX Project Take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Project timelines vary based on complexity and scope. Simple motion graphics typically take 1-2 weeks, while complex VFX sequences can take 4-8 weeks. We'll provide a detailed timeline during our initial consultation based on your specific requirements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's Included in Your VFX Services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our comprehensive VFX services include visual effects compositing, 3D rendering and modeling, motion graphics and animation, color grading and correction, post-production editing, and unlimited revisions until you're 100% satisfied."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do You Work With International Clients?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! We work with clients worldwide. Our remote workflow is optimized for seamless collaboration across time zones, with regular updates and clear communication throughout your project."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What File Formats Do You Deliver?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We deliver in all standard formats including MP4, MOV, ProRes, and more. We'll work with you to ensure the final deliverables match your technical specifications and platform requirements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How Do Revisions Work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer unlimited revisions as part of our service. You'll receive weekly progress updates, and we'll make adjustments based on your feedback until the project meets your exact vision and requirements."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "24Render VFX Portfolio Showcase",
+        "description": "Professional VFX and video editing work by 24Render studio",
+        "thumbnailUrl": "https://24render.com/assets/images/og-image.jpg",
+        "uploadDate": "2024-01-01",
+        "contentUrl": "https://www.youtube.com/watch?v=KsHnmoXBoa8",
+        "embedUrl": "https://www.youtube.com/embed/KsHnmoXBoa8"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Visual Effects and Video Editing",
+        "provider": {
+            "@type": "Organization",
+            "name": "24Render"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "VFX and Video Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Visual Effects (VFX)",
+                        "description": "Professional visual effects compositing and integration"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Motion Graphics",
+                        "description": "Dynamic motion graphics and animation services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "3D Rendering",
+                        "description": "High-quality 3D modeling and rendering"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Color Grading",
+                        "description": "Professional color grading and correction"
+                    }
+                }
+            ]
         }
     }
 </body>
